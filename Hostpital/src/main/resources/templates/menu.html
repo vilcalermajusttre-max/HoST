@@ -87,6 +87,15 @@
         .emergencias-icon {
             color: #ff6b6b;
         }
+        .citas-icon {
+            color: #5f27cd;
+        }
+        .historial-icon {
+            color: #00d2d3;
+        }
+        .habitaciones-icon {
+            color: #ff9ff3;
+        }
         .menu-title {
             font-size: 1.5rem;
             font-weight: 700;
@@ -137,6 +146,36 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(255, 154, 158, 0.3);
             color: #dc3545;
+        }
+        .btn-citas {
+            background: linear-gradient(135deg, #5f27cd 0%, #341f97 100%);
+            color: white;
+            border: none;
+        }
+        .btn-citas:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(95, 39, 205, 0.3);
+            color: white;
+        }
+        .btn-historial {
+            background: linear-gradient(135deg, #00d2d3 0%, #01a3a4 100%);
+            color: white;
+            border: none;
+        }
+        .btn-historial:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 210, 211, 0.3);
+            color: white;
+        }
+        .btn-habitaciones {
+            background: linear-gradient(135deg, #ff9ff3 0%, #feca57 100%);
+            color: #2c3e50;
+            border: none;
+        }
+        .btn-habitaciones:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 159, 243, 0.3);
+            color: #2c3e50;
         }
         .stats-section {
             background: #f8f9fa;
@@ -228,6 +267,57 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Citas Médicas -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="menu-card">
+                    <div class="text-center">
+                        <i class="fas fa-calendar-check menu-icon citas-icon"></i>
+                        <h3 class="menu-title">Citas Médicas</h3>
+                        <p class="menu-description">
+                            Programación y gestión de citas médicas. Asigne doctores,
+                            horarios y controle el flujo de consultas diarias.
+                        </p>
+                        <a href="/citas/" class="btn btn-menu btn-citas">
+                            <i class="fas fa-calendar-plus me-2"></i>Gestionar Citas
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Historial Médico -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="menu-card">
+                    <div class="text-center">
+                        <i class="fas fa-file-medical menu-icon historial-icon"></i>
+                        <h3 class="menu-title">Historial Médico</h3>
+                        <p class="menu-description">
+                            Registro completo del historial clínico de pacientes.
+                            Diagnósticos, tratamientos y evolución médica detallada.
+                        </p>
+                        <a href="/historiales/" class="btn btn-menu btn-historial">
+                            <i class="fas fa-folder-open me-2"></i>Gestionar Historiales
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Habitaciones -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="menu-card">
+                    <div class="text-center">
+                        <i class="fas fa-bed menu-icon habitaciones-icon"></i>
+                        <h3 class="menu-title">Habitaciones</h3>
+                        <p class="menu-description">
+                            Control de disponibilidad y asignación de habitaciones.
+                            Gestione ocupación, limpieza y mantenimiento hospitalario.
+                        </p>
+                        <a href="/habitaciones/" class="btn btn-menu btn-habitaciones">
+                            <i class="fas fa-hospital-user me-2"></i>Gestionar Habitaciones
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Sección de Estadísticas -->
@@ -236,7 +326,7 @@
                 <i class="fas fa-chart-bar me-2"></i>Panel de Control
             </h3>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="stat-item">
                         <div class="stat-number">
                             <i class="fas fa-users"></i>
@@ -244,7 +334,7 @@
                         <div class="stat-label">Pacientes Registrados</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="stat-item">
                         <div class="stat-number">
                             <i class="fas fa-user-md"></i>
@@ -252,12 +342,20 @@
                         <div class="stat-label">Doctores Activos</div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="stat-item">
                         <div class="stat-number">
-                            <i class="fas fa-ambulance"></i>
+                            <i class="fas fa-calendar-check"></i>
                         </div>
-                        <div class="stat-label">Emergencias Activas</div>
+                        <div class="stat-label">Citas Programadas</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item">
+                        <div class="stat-number">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="stat-label">Habitaciones Disponibles</div>
                     </div>
                 </div>
             </div>
